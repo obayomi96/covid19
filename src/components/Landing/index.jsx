@@ -42,7 +42,6 @@ class Landing extends Component {
     event.preventDefault();
     const { searchedCountry } = this.state;
     const res = await axios.get(`${API_URL}/countries/${searchedCountry}`);
-    console.log('ddd', res)
     if (res.data && searchedCountry !== '') {
       const date = formatDate(res.data.lastUpdate);
       this.setState({
