@@ -1,21 +1,15 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.landing-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  text-align: center;
+  background-color: #EEE;
+  /* min-height: 10vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +18,102 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form {
+  width: 100%;
+}
+
+.submit-btn {
+  outline: none;
+  border-radius: 4px;
+  color: gray;
+  cursor: pointer;
+  border: 3px solid transparent;
+  padding: 0.6em 1em;
+  font-weight: 700;
+  box-shadow: 
+    -4px -4px 13px 4px #FFF,
+    4px 4px 13px 4px #C4C4C4;
   }
-  to {
-    transform: rotate(360deg);
+
+.submit-btn:hover {
+  box-shadow:
+  -3px -3px 8px 3px #FFF,
+  3px 3px 8px 3px #C4C4C4;
+}
+.submit-btn:focus {
+  box-shadow: 
+  -4px -4px 13px 4px #FFF,
+  4px 4px 13px 4px #C4C4C4;
+}
+
+@media only screen and (max-width: 768px) {
+  .landing-div {
+    width: 100%;
   }
+  .search-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .case-value {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .search-bar::placeholder {
+    font-size: 10px;
+  }
+  .search-div {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search-bar {
+    padding: .6em 1em;
+    border-radius: 2px;
+    width: auto;
+    margin:  0;
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+  }
+}
+
+.search-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+ border: none;
+ outline: none;
+ background: none;
+ padding: .6em 1em;
+ border-radius: 2px;
+ width: 50%;
+ margin: 2em;
+
+ box-shadow:
+   inset -4px -4px 10px 4px #FFF,
+   inset 4px 4px 10px 4px #C4C4C4;
+ 
+ color: #AAA;
+ font-size: 18px;
+ transition: 0.2s ease-out;
+}
+.search-bar:focus {
+  box-shadow:
+   inset -1px -1px 3px 1px #FFF,
+   inset 1px 1px 3px 1px #C4C4C4;
 }

@@ -1,0 +1,22 @@
+.search-res-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.updatedAt {
+  text-align: center; 
+  padding: 20px 0;
+  color: grey
+}
+@media only screen and (max-width: 768px) {
+  .search-res-div {
+    width: 100%;
+  }
+  .case-value {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
