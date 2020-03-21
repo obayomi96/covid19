@@ -106,7 +106,7 @@ class Landing extends Component {
             </form>
           </div>
         </header>
-        <h3 className="updatedAt">Last update on {lastUpdate}</h3>
+        <h3 className="updatedAt">Last updated on {lastUpdate}</h3>
         <div className="landing-div">
           <div className="case-value">
             <h1 style={{ color: 'orange' }}>Confirmed: {confirmed}</h1>
