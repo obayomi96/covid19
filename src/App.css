@@ -70,32 +70,16 @@ form {
   line-height: 30px;
   border-radius: 2px;
   padding: 32px;
-  /* max-width: 480px; */
   box-shadow:
    -2px -2px 6px 2px #FFF,
    2px 2px 6px 2px #C4C4C4;
 }
 
 @media only screen and (max-width: 768px) {
-  .repoCard-div {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .view-btn {
-    width: 100%;
-    padding: .5em 2em;
-  }
-  .repo-info {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
   .landing-div {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
   }
   .search-div {
     display: flex;

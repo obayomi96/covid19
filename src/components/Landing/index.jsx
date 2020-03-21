@@ -50,6 +50,7 @@ class Landing extends Component {
         searchedCountryRecovered: res.data.recovered.value,
         searchedCountryDeaths: res.data.deaths.value,
         searchedCountrylastUpdate: date,
+        searchedCountry: '',
       });
     } else {
       Swal.fire({
