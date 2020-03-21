@@ -1,14 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .landing-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  color: grey;
+  height: inherit;
+  margin: auto;
+  width: 100%;
+  padding: 1em 0;
+  text-align: left;
 }
 
 .App-header {
   text-align: center;
-  background-color: #EEE;
+  background-color: rgba(240, 234, 234, 0.952);
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -52,8 +62,39 @@ form {
   4px 4px 13px 4px #C4C4C4;
 }
 
+.case-value {
+  margin: 1em auto;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  border-radius: 2px;
+  padding: 32px;
+  /* max-width: 480px; */
+  box-shadow:
+   -2px -2px 6px 2px #FFF,
+   2px 2px 6px 2px #C4C4C4;
+}
+
+@media only screen and (max-width: 768px) {
+  .repoCard-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .view-btn {
+    width: 100%;
+    padding: .5em 2em;
+  }
+  .repo-info {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .landing-div {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
   .search-div {
@@ -62,10 +103,7 @@ form {
     justify-content: space-between;
   }
   .case-value {
-    display: flex;
     width: 100%;
-    margin: 0 auto;
-    justify-content: center;
   }
   .search-bar::placeholder {
     font-size: 10px;

@@ -106,22 +106,22 @@ class Landing extends Component {
             </form>
           </div>
         </header>
-        <h3 className="updatedAt">Last updated on {lastUpdate}</h3>
         <div className="landing-div">
           <div className="case-value">
-            <h1 style={{ color: 'orange' }}>Confirmed: {confirmed}</h1>
+            <h3 style={{ color: 'orange' }}>Confirmed {confirmed}</h3>
           </div>
           <div className="case-value">
-            <h1 style={{ color: 'green' }}>Recovered: {recovered}</h1>
+            <h3 style={{ color: 'green' }}>Recovered {recovered}</h3>
           </div>
           <div className="case-value">
-            <h1 style={{ color: 'red' }}>Deaths: {deaths}</h1>
+            <h3 style={{ color: 'red' }}>Deaths {deaths}</h3>
           </div>
         </div>
+        <h3 className="updatedAt">Last updated on {lastUpdate}</h3>
         {
           searchedCountryConfirmed ?
             <SearchResult
-              countryName={country}
+              countryName={country.toUpperCase()}
               confirmed={searchedCountryConfirmed}
               recovered={searchedCountryRecovered}
               deaths={searchedCountryDeaths}
