@@ -29,9 +29,32 @@
 }
 
 .search-div {
-  display: flex;
   width: 100%;
-  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+ border: none;
+ outline: none;
+ background: none;
+ padding: .6em 1em;
+ border-radius: 2px;
+ width: 50%;
+ margin: 2em;
+
+ box-shadow:
+   inset -4px -4px 10px 4px #FFF,
+   inset 4px 4px 10px 4px #C4C4C4;
+ 
+ color: #AAA;
+ font-size: 18px;
+ transition: 0.2s ease-out;
+}
+.search-bar:focus {
+  box-shadow:
+   inset -1px -1px 3px 1px #FFF,
+   inset 1px 1px 3px 1px #C4C4C4;
 }
 
 form {
@@ -75,6 +98,7 @@ form {
    2px 2px 6px 2px #C4C4C4;
 }
 
+
 @media only screen and (max-width: 768px) {
   .landing-div {
     display: flex;
@@ -92,12 +116,6 @@ form {
   .search-bar::placeholder {
     font-size: 10px;
   }
-  .search-div {
-    box-sizing: border-box;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
   .search-bar {
     padding: .6em 1em;
     border-radius: 2px;
@@ -109,33 +127,4 @@ form {
     justify-content: space-between;
     padding: 1em;
   }
-}
-
-.search-div {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.search-bar {
- border: none;
- outline: none;
- background: none;
- padding: .6em 1em;
- border-radius: 2px;
- width: 50%;
- margin: 2em;
-
- box-shadow:
-   inset -4px -4px 10px 4px #FFF,
-   inset 4px 4px 10px 4px #C4C4C4;
- 
- color: #AAA;
- font-size: 18px;
- transition: 0.2s ease-out;
-}
-.search-bar:focus {
-  box-shadow:
-   inset -1px -1px 3px 1px #FFF,
-   inset 1px 1px 3px 1px #C4C4C4;
 }
