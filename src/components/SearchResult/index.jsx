@@ -9,16 +9,16 @@ const SearchResult = ({ countryName, confirmed, recovered, deaths, latestUpdate 
       </div>
       <div className="search-res-div">
         <div className="case-value" >
-          <h3 style={{ color: 'orange' }}>confirmed {confirmed}</h3>
+          <h3 style={{ color: 'orange' }}>Confirmed {confirmed}</h3>
         </div>
         <div className="case-value" >
-          <h3 style={{ color: 'green' }}>recovered {recovered}</h3>
+          <h3 style={{ color: 'green' }}>Recovered {recovered}</h3>
         </div>
         <div className="case-value" >
-          <h3 style={{ color: 'red' }}>deaths {deaths}</h3>
+          <h3 style={{ color: 'red' }}>Deaths {deaths}</h3>
         </div>
       </div>
-      <h3 className="updatedAt">Last updated on {latestUpdate}</h3>
+      <h3 className="updatedAt">Last updated at {latestUpdate}</h3>
     </div>
   );
 }
