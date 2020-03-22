@@ -25,11 +25,12 @@ export const formatDate = (data) => {
     'December'
   ];
   const date = new Date(data);
+  const time = date.toTimeString();
   const day = date.getDay();
   const month = date.getMonth();
   const year = date.getFullYear();
   const datNameStr = days[day];
   const monthStr = months[month]
   const dayN = date.getDate();
-  return `${datNameStr} ${dayN} ${monthStr} ${year}`;
+  return `${time} ${datNameStr} ${dayN} ${monthStr} ${year}`;
 };

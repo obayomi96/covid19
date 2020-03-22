@@ -118,7 +118,7 @@ class Landing extends Component {
             <h3 style={{ color: 'red' }}>Deaths {deaths}</h3>
           </div>
         </div>
-        <h3 className="updatedAt">Last updated on {lastUpdate}</h3>
+        <h3 className="updatedAt">Last updated at {lastUpdate}</h3>
         {
           searchedCountryConfirmed ?
             <SearchResult
