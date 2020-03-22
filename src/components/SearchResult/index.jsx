@@ -5,7 +5,7 @@ const SearchResult = ({ countryName, confirmed, recovered, deaths, latestUpdate 
   return (
     <div>
       <div>
-        <h1 style={{ color: 'grey', textAlign: 'center', borderTop: '1px solid #ddd' }}>{countryName}</h1>
+        <h2 style={{ color: 'grey', textAlign: 'center', borderTop: '1px solid #ddd' }}>TOTAL CASES IN {countryName}</h2>
       </div>
       <div className="search-res-div">
         <div className="case-value" >

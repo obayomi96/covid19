@@ -101,7 +101,7 @@ class Landing extends Component {
               cursor: 'pointer',
             }}
           >
-            COVID-19 real time tracker
+            COVID-19 REAL TIME TRACKER
         </h3>
           <div className="search-div">
             <form onSubmit={this.handleSubmit}>
@@ -122,6 +122,9 @@ class Landing extends Component {
             </form>
           </div>
         </header>
+        <div>
+        <h2 style={{ color: 'grey', textAlign: 'center', borderTop: '1px solid #ddd' }}>TOTAL CASES WORLDWIDE</h2>
+      </div>
         <div className="landing-div">
           <div className="case-value">
             <h3 style={{ color: 'orange' }}>Confirmed {confirmed}</h3>
