@@ -8,15 +8,14 @@ class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {},
-      confirmed: 0,
-      recovered: 0,
-      deaths: 0,
+      confirmed: '',
+      recovered: '',
+      deaths: '',
       searchedCountry: '',
       country: '',
-      searchedCountryConfirmed: 0,
-      searchedCountryRecovered: 0,
-      searchedCountryDeaths: 0,
+      searchedCountryConfirmed: '',
+      searchedCountryRecovered: '',
+      searchedCountryDeaths: '',
       lastUpdate: '',
       searchedCountrylastUpdate: '',
     }
@@ -41,26 +40,42 @@ class Landing extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const { searchedCountry } = this.state;
-    const res = await axios.get(`${API_URL}/countries/${searchedCountry}`);
-    if (res.data && searchedCountry !== '') {
-      const date = formatDate(res.data.lastUpdate);
-      this.setState({
-        country: searchedCountry,
-        searchedCountryConfirmed: res.data.confirmed.value,
-        searchedCountryRecovered: res.data.recovered.value,
-        searchedCountryDeaths: res.data.deaths.value,
-        searchedCountrylastUpdate: date,
-        searchedCountry: '',
-      });
-    } else {
-      Swal.fire({
-        position: 'top-end',
-        icon: 'error',
-        text: 'Please enter a valid Country name',
-        showConfirmButton: false,
-        timer: 1500,
-        toast: true
-      });
+    try {
+      const res = await axios.get(`${API_URL}/countries/${searchedCountry}`);
+      if (searchedCountry !== '') {
+        const date = formatDate(res.data.lastUpdate);
+        this.setState({
+          country: searchedCountry,
+          searchedCountryConfirmed: res.data.confirmed.value,
+          searchedCountryRecovered: res.data.recovered.value,
+          searchedCountryDeaths: res.data.deaths.value,
+          searchedCountrylastUpdate: date,
+          searchedCountry: '',
+        });
+      } else {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          text: 'Please enter a valid country',
+          showConfirmButton: false,
+          timer: 1500,
+          toast: true
+        });
+      }
+    } catch(error) {
+      if (error) {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'error',
+          text: `Nothing found for your search '${searchedCountry}'`,
+          showConfirmButton: false,
+          timer: 2500,
+          toast: true
+        });
+        this.setState({
+          searchedCountry: '',
+        })
+      }
     }
   }
 
@@ -120,7 +135,7 @@ class Landing extends Component {
         </div>
         <h3 className="updatedAt">Last updated at {lastUpdate}</h3>
         {
-          searchedCountryConfirmed ?
+          searchedCountryConfirmed !== '' ?
             <SearchResult
               countryName={country.toUpperCase()}
               confirmed={searchedCountryConfirmed}
@@ -128,7 +143,7 @@ class Landing extends Component {
               deaths={searchedCountryDeaths}
               latestUpdate={searchedCountrylastUpdate}
             />
-            : ''
+          : ''
         }
       </div>
     );
