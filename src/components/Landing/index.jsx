@@ -127,13 +127,16 @@ class Landing extends Component {
       </div>
         <div className="landing-div">
           <div className="case-value">
-            <h3 style={{ color: 'orange' }}>Confirmed {confirmed}</h3>
+            <h3 style={{ color: 'orange' }}>Confirmed</h3>
+            <h3 style={{ color: 'grey' }}>{confirmed}</h3>
           </div>
           <div className="case-value">
-            <h3 style={{ color: 'green' }}>Recovered {recovered}</h3>
+            <h3 style={{ color: 'green' }}>Recovered</h3>
+            <h3 style={{ color: 'grey' }}>{recovered}</h3>
           </div>
           <div className="case-value">
-            <h3 style={{ color: 'red' }}>Deaths {deaths}</h3>
+            <h3 style={{ color: 'red' }}>Deaths</h3>
+            <h3 style={{ color: 'grey' }}>{deaths}</h3>
           </div>
         </div>
         <h3 className="updatedAt">Last updated at {lastUpdate}</h3>

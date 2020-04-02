@@ -8,6 +8,11 @@
   padding: 20px 79px;
   color: grey;
 }
+.case-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 @media only screen and (max-width: 768px) {
   .search-res-div {
     width: 100%;
@@ -16,7 +21,7 @@
     display: flex;
     width: 100%;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
   }
   .updatedAt {
     padding: 20px 30px;
